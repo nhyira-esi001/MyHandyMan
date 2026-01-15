@@ -1,0 +1,72 @@
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 100%;
+  padding: 4rem 2rem;
+  background-color: #f8fafc;
+  min-height: calc(100vh - 70px); /* accounts for header height */
+}
+
+/* Left side */
+.hero__content {
+  max-width: 600px;
+}
+
+.hero__tagline {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  color: #fb923c;
+  margin-bottom: 1rem;
+}
+
+.hero__title {
+  font-size: 3rem;
+  line-height: 1.2;
+  font-weight: 700;
+  color: #111827;
+  margin-bottom: 1.25rem;
+}
+
+.hero__description {
+  font-size: 1rem;
+  color: #4b5563;
+  margin-bottom: 2rem;
+  margin-top: 1.5rem;
+  max-width: 520px;
+}
+
+/* Buttons */
+.hero__actions {
+  display: flex;
+  gap: 1rem;
+}
+
+.hero__primary-btn {
+  background-color: #fb923c;
+  color: #fff;
+  border: none;
+  padding: 0.7rem 1.4rem;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
+.hero__secondary-btn {
+  background-color: #ffffff;
+  color: #111827;
+  border: 1px solid #e5e7eb;
+  padding: 0.7rem 1.4rem;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
+/* Right side */
+.hero__image img {
+  width: 600px;
+  max-width: 100%;
+  border-radius: 12px;
+}
