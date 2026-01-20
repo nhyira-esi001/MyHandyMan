@@ -12,14 +12,14 @@ const Header = () => {
 
       {/* Navigation */}
       <nav className="header__nav">
-        <NavLink to="/services" className="nav-link">
-          Service
+        <NavLink to="/" className="nav-link">
+          Home
         </NavLink>
         <NavLink to="/why-us" className="nav-link">
           Why Us
         </NavLink>
         <NavLink to="/testimonials" className="nav-link">
-          Testimonial
+          Testimonials
         </NavLink>
         <NavLink to="/faq" className="nav-link">
           FAQ
@@ -31,8 +31,11 @@ const Header = () => {
 
       {/* Actions */}
       <div className="header__actions">
+        <NavLink to="/login" className="login-link">
+          Login
+        </NavLink>
         <NavLink to="/signup" className="signup-btn">
-          Sign Up
+          Get Started
         </NavLink>
       </div>
     </header>

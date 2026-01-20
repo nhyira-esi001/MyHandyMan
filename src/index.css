@@ -1,30 +1,76 @@
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
 
-*{
+* {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  font-family: Outfit;
+  font-family: 'Outfit', sans-serif;
   scroll-behavior: smooth;
 }
-body{
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
   min-height: 100vh;
+  background-color: #fff;
+  color: #111827;
 }
-a{
+
+a {
   text-decoration: none;
-  color: inherit ;
+  color: inherit;
 }
-.app{
-  width: 80%;
-  margin: auto;
+
+button {
+  font-family: 'Outfit', sans-serif;
+}
+
+.app {
+  width: 100%;
+  margin: 0 auto;
+}
+
+main {
+  width: 100%;
 }
 
 @keyframes fadeIn {
-  0%{
+  0% {
     opacity: 0;
   }
-  100%{
+  100% {
     opacity: 1;
   }
 }
-'
+
+/* Color variables */
+:root {
+  --primary-orange: #fb923c;
+  --dark-bg: #1a2a3a;
+  --light-bg: #f8fafc;
+  --text-dark: #111827;
+  --text-light: #4b5563;
+  --border-light: #e5e7eb;
+  --text-muted: #b0b5c0;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #fb923c;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #ea8a1e;
+}
+

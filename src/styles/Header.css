@@ -64,7 +64,20 @@
 /* Actions */
 .header__actions {
   display: flex;
-  gap: 0.75rem;
+  gap: 1rem;
+  align-items: center;
+}
+
+.login-link {
+  text-decoration: none;
+  font-size: 0.9rem;
+  color: #4b5563;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.login-link:hover {
+  color: #111827;
 }
 
 .signup-btn {
@@ -74,4 +87,9 @@
   border-radius: 6px;
   background-color: #fb923c;
   color: #fff;
+  transition: background-color 0.3s ease;
+}
+
+.signup-btn:hover {
+  background-color: #ea8a1e;
 }
