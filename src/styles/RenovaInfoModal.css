@@ -1,0 +1,126 @@
+.info-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1002;
+}
+
+.info-modal-content {
+  background-color: white;
+  border-radius: 12px;
+  padding: 2.5rem;
+  max-width: 700px;
+  width: 90%;
+  max-height: 85vh;
+  overflow-y: auto;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+  position: relative;
+  animation: slideUp 0.3s ease-out;
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.info-modal-close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: none;
+  border: none;
+  color: #666;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: color 0.3s ease;
+}
+
+.info-modal-close:hover {
+  color: #fb923c;
+}
+
+.info-modal-header {
+  margin-bottom: 2rem;
+}
+
+.info-modal-header h2 {
+  font-size: 2rem;
+  color: #111827;
+  margin-bottom: 0.5rem;
+}
+
+.info-modal-header p {
+  color: #4b5563;
+  font-size: 1rem;
+}
+
+.info-modal-body {
+  margin-bottom: 2rem;
+}
+
+.info-section {
+  margin-bottom: 2rem;
+}
+
+.info-section h3 {
+  font-size: 1.25rem;
+  color: #fb923c;
+  margin-bottom: 1rem;
+}
+
+.info-section p {
+  color: #4b5563;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+.info-section ul {
+  margin-left: 1.5rem;
+  color: #4b5563;
+  line-height: 1.8;
+}
+
+.info-section li {
+  margin-bottom: 0.5rem;
+}
+
+.info-modal-close-btn {
+  width: 100%;
+  padding: 0.875rem 1rem;
+  background-color: #fb923c;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.info-modal-close-btn:hover {
+  background-color: #ea8a1e;
+}
+
+@media (max-width: 640px) {
+  .info-modal-content {
+    padding: 1.5rem;
+  }
+
+  .info-modal-header h2 {
+    font-size: 1.5rem;
+  }
+}

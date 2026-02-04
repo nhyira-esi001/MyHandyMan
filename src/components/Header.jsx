@@ -1,13 +1,26 @@
 import { NavLink } from "react-router-dom";
 import "../styles/header.css";
+import { FaSquare } from "react-icons/fa";
 
 const Header = () => {
+  const scrollToSection = (sectionId) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
+  const handleNavClick = (e, sectionId) => {
+    e.preventDefault();
+    scrollToSection(sectionId);
+  };
+
   return (
     <header className="header">
       {/* Logo */}
       <div className="header__brand">
-        <span className="logo-icon">⬛</span>
-        <span className="logo-text">Renova</span>
+        <span className="logo-icon"><FaSquare size={24} /></span>
+        <span className="logo-text">EMIWƆK</span>
       </div>
 
       {/* Navigation */}
@@ -15,18 +28,15 @@ const Header = () => {
         <NavLink to="/" className="nav-link">
           Home
         </NavLink>
-        <NavLink to="/why-us" className="nav-link">
+        <a href="#why-us" onClick={(e) => handleNavClick(e, "why-us")} className="nav-link">
           Why Us
-        </NavLink>
-        <NavLink to="/testimonials" className="nav-link">
+        </a>
+        <a href="#testimonials" onClick={(e) => handleNavClick(e, "testimonials")} className="nav-link">
           Testimonials
-        </NavLink>
-        <NavLink to="/faq" className="nav-link">
-          FAQ
-        </NavLink>
-        <NavLink to="/about" className="nav-link">
+        </a>
+        <a href="#services" onClick={(e) => handleNavClick(e, "services")} className="nav-link">
           About
-        </NavLink>
+        </a>
       </nav>
 
       {/* Actions */}

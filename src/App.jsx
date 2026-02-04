@@ -1,4 +1,5 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { useEffect, useState } from "react";
 import Header from "./components/Header";
 import Hero from "./components/Hero";
 import Features from "./components/Features";
@@ -8,6 +9,7 @@ import Testimonials from "./components/Testimonials";
 import CTA from "./components/CTA";
 import BookingForm from "./components/BookingForm";
 import Footer from "./components/Footer";
+import LoginModal from "./components/LoginModal";
 
 const Page = ({ title }) => (
   <div style={{ padding: "2rem" }}>
@@ -17,9 +19,25 @@ const Page = ({ title }) => (
 );
 
 function App() {
+  const [showLoginModal, setShowLoginModal] = useState(false);
+
+  useEffect(() => {
+    // Show login modal on first visit
+    const hasVisited = localStorage.getItem("hasVisited");
+    if (!hasVisited) {
+      setShowLoginModal(true);
+      localStorage.setItem("hasVisited", "true");
+    }
+  }, []);
+
+  const handleCloseLoginModal = () => {
+    setShowLoginModal(false);
+  };
+
   return (
     <BrowserRouter>
       <Header />
+      <LoginModal isOpen={showLoginModal} onClose={handleCloseLoginModal} />
       <main>
         <Hero />
         <Features />

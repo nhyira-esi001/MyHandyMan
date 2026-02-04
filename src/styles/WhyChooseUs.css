@@ -72,8 +72,9 @@
 }
 
 .benefit-check {
-  color: #111827;
+  color: #fb923c;
   font-size: 1.2rem;
+  flex-shrink: 0;
 }
 
 .why-choose-btn {

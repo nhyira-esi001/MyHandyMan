@@ -1,20 +1,21 @@
 import "../styles/Features.css";
+import { FaBriefcase, FaCheck, FaCoins } from "react-icons/fa";
 
 const Features = () => {
   const features = [
     {
       id: 1,
-      icon: "💼",
+      icon: <FaBriefcase size={32} />,
       title: "Professional Expertise",
     },
     {
       id: 2,
-      icon: "✓",
+      icon: <FaCheck size={32} />,
       title: "Reliable Service",
     },
     {
       id: 3,
-      icon: "💰",
+      icon: <FaCoins size={32} />,
       title: "Affordable Rates",
     },
   ];

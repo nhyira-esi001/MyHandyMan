@@ -1,5 +1,6 @@
 import { useState } from "react";
 import "../styles/BookingForm.css";
+import { FaMapMarkerAlt, FaPhone, FaEnvelope } from "react-icons/fa";
 
 const BookingForm = () => {
   const [formData, setFormData] = useState({
@@ -107,7 +108,7 @@ const BookingForm = () => {
 
         <div className="booking-info">
           <div className="info-item">
-            <div className="info-icon">📍</div>
+            <div className="info-icon"><FaMapMarkerAlt size={24} /></div>
             <div className="info-content">
               <p className="info-label">Address</p>
               <p className="info-text">2662 Eldridge Rd, Asheville, NC 28805</p>
@@ -115,7 +116,7 @@ const BookingForm = () => {
           </div>
 
           <div className="info-item">
-            <div className="info-icon">📞</div>
+            <div className="info-icon"><FaPhone size={24} /></div>
             <div className="info-content">
               <p className="info-label">Phone</p>
               <p className="info-text">(828) 555-0136</p>
@@ -123,10 +124,10 @@ const BookingForm = () => {
           </div>
 
           <div className="info-item">
-            <div className="info-icon">📧</div>
+            <div className="info-icon"><FaEnvelope size={24} /></div>
             <div className="info-content">
               <p className="info-label">Email</p>
-              <p className="info-text">hello@renovacom.com</p>
+              <p className="info-text">hello@emiwɔk.com</p>
             </div>
           </div>
         </div>

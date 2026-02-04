@@ -1,6 +1,11 @@
+import { useState } from "react";
 import "../styles/WhyChooseUs.css";
+import RenovaInfoModal from "./RenovaInfoModal";
+import { FaCheckCircle, FaUserTie } from "react-icons/fa";
 
 const WhyChooseUs = () => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
   const benefits = [
     "Monthly Inspection",
     "General Repair Maintenance",
@@ -8,10 +13,10 @@ const WhyChooseUs = () => {
   ];
 
   return (
-    <section className="why-choose">
+    <section className="why-choose" id="why-us">
       <div className="why-choose-container">
         <div className="why-choose-image">
-          <div className="placeholder-image">👷</div>
+          <div className="placeholder-image"><FaUserTie size={80} /></div>
         </div>
 
         <div className="why-choose-content">
@@ -22,21 +27,26 @@ const WhyChooseUs = () => {
 
           <p className="why-choose-description">
             Our open, positive, and proactive approach helps us find ways to
-            align your work environment to your taste.
+            align your work environment to your taste. With our comprehensive
+            services and professional team, we deliver excellence.
           </p>
 
           <ul className="benefits-list">
             {benefits.map((benefit, index) => (
               <li key={index} className="benefit-item">
-                <span className="benefit-check">●</span>
+                <FaCheckCircle className="benefit-check" />
                 {benefit}
               </li>
             ))}
           </ul>
 
-          <button className="why-choose-btn">Read More</button>
+          <button className="why-choose-btn" onClick={() => setIsModalOpen(true)}>
+            Read More
+          </button>
         </div>
       </div>
+
+      <RenovaInfoModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
     </section>
   );
 };

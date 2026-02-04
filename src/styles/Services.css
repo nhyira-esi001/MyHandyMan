@@ -48,6 +48,7 @@
 .service-icon {
   font-size: 3rem;
   margin-bottom: 1.5rem;
+  color: #fb923c;
 }
 
 .service-title {
@@ -61,6 +62,19 @@
   font-size: 0.95rem;
   color: #b0b5c0;
   line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.service-action-btn {
+  padding: 0.75rem 1.5rem;
+  background-color: #fb923c;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 0.95rem;
 }
 
 @media (max-width: 768px) {
@@ -75,4 +89,10 @@
   .services-grid {
     grid-template-columns: 1fr;
   }
+}
+
+.service-action-btn:hover {
+  background-color: #ea8a1e;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(251, 146, 60, 0.3);
 }
