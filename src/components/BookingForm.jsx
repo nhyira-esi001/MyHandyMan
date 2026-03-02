@@ -127,7 +127,7 @@ const BookingForm = () => {
             <div className="info-icon"><FaEnvelope size={24} /></div>
             <div className="info-content">
               <p className="info-label">Email</p>
-              <p className="info-text">hello@emiwɔk.com</p>
+              <p className="info-text">hello@ɛniwɔk.com</p>
             </div>
           </div>
         </div>

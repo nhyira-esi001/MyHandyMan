@@ -29,9 +29,8 @@
 
 .footer-logo {
   font-size: 1.5rem;
-  color: #fb923c;
-  display: flex;
-  align-items: center;
+  height: 45px;
+  width: auto;
 }
 
 .footer-text {

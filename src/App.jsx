@@ -19,10 +19,9 @@ const Page = ({ title }) => (
 );
 
 function App() {
-  const [showLoginModal, setShowLoginModal] = useState(false);
 
   useEffect(() => {
-    // Show login modal on first visit
+
     const hasVisited = localStorage.getItem("hasVisited");
     if (!hasVisited) {
       setShowLoginModal(true);
@@ -30,14 +29,9 @@ function App() {
     }
   }, []);
 
-  const handleCloseLoginModal = () => {
-    setShowLoginModal(false);
-  };
-
   return (
     <BrowserRouter>
       <Header />
-      <LoginModal isOpen={showLoginModal} onClose={handleCloseLoginModal} />
       <main>
         <Hero />
         <Features />

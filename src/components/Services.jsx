@@ -1,6 +1,7 @@
 import { useState } from "react";
 import "../styles/Services.css";
 import ServiceModal from "./ServiceModal";
+import ServiceInfoModal from "./ServiceInfoModal";
 import {
   FaWrench,
   FaHammer,
@@ -8,11 +9,14 @@ import {
   FaBolt,
   FaTree,
   FaHome,
+  FaQuestionCircle,
 } from "react-icons/fa";
 
 const Services = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [selectedService, setSelectedService] = useState(null);
+  const [isInfoModalOpen, setIsInfoModalOpen] = useState(false);
+  const [infoService, setInfoService] = useState(null);
 
   const services = [
     {
@@ -69,6 +73,17 @@ const Services = () => {
     setSelectedService(null);
   };
 
+  const handleInfoClick = (e, service) => {
+    e.stopPropagation();
+    setInfoService(service);
+    setIsInfoModalOpen(true);
+  };
+
+  const handleCloseInfoModal = () => {
+    setIsInfoModalOpen(false);
+    setInfoService(null);
+  };
+
   return (
     <section className="services" id="services">
       <div className="services-header">
@@ -85,6 +100,13 @@ const Services = () => {
             className="service-card"
             onClick={() => handleServiceClick(service)}
           >
+            <button
+              className="service-info-btn"
+              onClick={(e) => handleInfoClick(e, service)}
+              aria-label={`Info about ${service.title}`}
+            >
+              <FaQuestionCircle size={18} />
+            </button>
             <div className="service-icon">{service.icon}</div>
             <h3 className="service-title">{service.title}</h3>
             <p className="service-description">{service.description}</p>
@@ -97,6 +119,12 @@ const Services = () => {
         isOpen={isModalOpen}
         onClose={handleCloseModal}
         serviceTitle={selectedService?.title}
+      />
+
+      <ServiceInfoModal
+        isOpen={isInfoModalOpen}
+        onClose={handleCloseInfoModal}
+        serviceTitle={infoService?.title}
       />
     </section>
   );

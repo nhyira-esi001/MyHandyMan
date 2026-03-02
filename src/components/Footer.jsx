@@ -1,5 +1,6 @@
 import "../styles/Footer.css";
 import { FaHome, FaFacebook, FaLinkedin, FaTwitter, FaInstagram } from "react-icons/fa";
+import logo from "../assets/images/darkmode.png";
 
 const Footer = () => {
   const scrollToSection = (sectionId) => {
@@ -14,8 +15,8 @@ const Footer = () => {
       <div className="footer-content">
         <div className="footer-section">
           <div className="footer-brand">
-            <span className="footer-logo"><FaHome size={24} /></span>
-            <span className="footer-text">EMIWƆK</span>
+            <img src={logo} alt="ƐNIWƆK logo" className="logo-icon" />
+            <span className="footer-text">ƐNIWƆK</span>
           </div>
           <p className="footer-description">
             Transforming homes with professional expertise and dedication. Our team is ready to deliver
