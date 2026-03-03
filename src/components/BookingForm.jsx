@@ -111,7 +111,7 @@ const BookingForm = () => {
             <div className="info-icon"><FaMapMarkerAlt size={24} /></div>
             <div className="info-content">
               <p className="info-label">Address</p>
-              <p className="info-text">2662 Eldridge Rd, Asheville, NC 28805</p>
+              <p className="info-text">P. O. Box TN 494, North Legon, Accra</p>
             </div>
           </div>
 
@@ -119,7 +119,7 @@ const BookingForm = () => {
             <div className="info-icon"><FaPhone size={24} /></div>
             <div className="info-content">
               <p className="info-label">Phone</p>
-              <p className="info-text">(828) 555-0136</p>
+              <p className="info-text">(233) 555-0136-342</p>
             </div>
           </div>
 
@@ -127,7 +127,7 @@ const BookingForm = () => {
             <div className="info-icon"><FaEnvelope size={24} /></div>
             <div className="info-content">
               <p className="info-label">Email</p>
-              <p className="info-text">hello@ɛniwɔk.com</p>
+              <p className="info-text">pkay@ɛniwɔk.com</p>
             </div>
           </div>
         </div>

@@ -1,35 +1,38 @@
-/* Footer */
+/* ─── Footer — mobile first ────────────────────────────── */
 .footer {
   background-color: #1a2a3a;
   color: white;
-  padding: 3rem 2rem;
+  padding: 2rem 1rem;
 }
 
+/* Mobile: single centered column */
 .footer-content {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 2.5rem;
+  grid-template-columns: 1fr;
+  gap: 2rem;
   max-width: 1200px;
   margin: 0 auto;
+  text-align: center;
 }
 
 .footer-section {
   display: flex;
   flex-direction: column;
+  align-items: center; /* center on mobile */
 }
 
 .footer-brand {
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 0.5rem;
   font-weight: 600;
   font-size: 1.2rem;
   margin-bottom: 1rem;
 }
 
-.footer-logo {
-  font-size: 1.5rem;
-  height: 45px;
+.logo-icon {
+  height: 40px;
   width: auto;
 }
 
@@ -42,25 +45,26 @@
   color: #b0b5c0;
   line-height: 1.6;
   margin-bottom: 1.5rem;
+  max-width: 360px;
 }
 
+/* Social icons — always centered */
 .footer-socials {
   display: flex;
   gap: 0.75rem;
+  justify-content: center;
 }
 
 .social-link {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 36px;
-  height: 36px;
+  width: 40px;
+  height: 40px; /* touch-friendly */
   background-color: rgba(255, 255, 255, 0.1);
   border-radius: 50%;
   color: white;
   text-decoration: none;
-  font-size: 0.85rem;
-  font-weight: 600;
   transition: background-color 0.3s ease;
 }
 
@@ -80,6 +84,7 @@
   display: flex;
   flex-direction: column;
   gap: 0.75rem;
+  align-items: center; /* center links on mobile */
 }
 
 .footer-links a {
@@ -93,13 +98,47 @@
   color: #fb923c;
 }
 
-@media (max-width: 768px) {
+/* ─── Tablet (640 px+): 2 × 2 grid ──────────────────────── */
+@media (min-width: 640px) {
   .footer {
-    padding: 2rem 1.5rem;
+    padding: 2.5rem 2rem;
   }
 
   .footer-content {
-    grid-template-columns: 1fr;
-    gap: 2rem;
+    grid-template-columns: repeat(2, 1fr);
+    text-align: left;
+  }
+
+  .footer-section {
+    align-items: flex-start;
+  }
+
+  .footer-brand {
+    justify-content: flex-start;
+  }
+
+  .footer-links {
+    align-items: flex-start;
+  }
+
+  /* Keep socials left-aligned on tablet */
+  .footer-socials {
+    justify-content: flex-start;
+  }
+}
+
+/* ─── Desktop (1024 px+): 4-column layout ──────────────── */
+@media (min-width: 1024px) {
+  .footer {
+    padding: 3rem 2.5rem;
+  }
+
+  .footer-content {
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    gap: 2.5rem;
+  }
+
+  .footer-description {
+    max-width: none;
   }
 }

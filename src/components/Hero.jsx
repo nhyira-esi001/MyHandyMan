@@ -1,6 +1,10 @@
 import { useState, useEffect, useCallback } from "react";
 import "../styles/hero.css";
 import artisan from "../assets/images/artsisanMan.jpg";
+import agent1 from "../assets/images/1.png";
+import agent2 from "../assets/images/2.png";
+import agent3 from "../assets/images/3.png";
+import agent4 from "../assets/images/4.png";
 import whyUs from "../assets/images/whyUs.jpg";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 
@@ -10,7 +14,7 @@ const slides = [
     title: <>Da fix buddy!</>,
     description:
       "Our open, positive, and proactive approach helps us find ways to align our work environment to your taste. With our comprehensive range of professional services, we're ready to transform your space into something extraordinary.",
-    image: artisan,
+    image: agent4,
     alt: "Artisan handyman ready to help",
   },
   {
@@ -18,7 +22,7 @@ const slides = [
     title: <>Your go-to experts for<br /> home maintenance.</>,
     description:
       "Book certified and experienced handymen for all your home and office repair needs. From plumbing and electrical work to general maintenance, we deliver reliable service at prices that fit your budget — without compromising on quality.",
-    image: whyUs,
+    image: agent1,
     alt: "Professional renovation team at work",
   },
   {
@@ -26,7 +30,7 @@ const slides = [
     title: <>Professional services just <br /> a click away.</>,
     description:
       "Our vetted handymen bring real expertise to every job, showing up on time and getting it done right. Enjoy stress-free repairs, transparent pricing, and dependable service designed to save you time and money.",
-    image: artisan,
+    image: agent2,
     alt: "Trusted artisan professional",
   },
   {
@@ -34,7 +38,7 @@ const slides = [
     title: <>Excellence worth<br /> every dime.</>,
     description:
       "We don't consider a job done until you're completely satisfied and make it worth your money. Our commitment to quality means thorough inspections, clean workmanship, and follow-through on every project we undertake.",
-    image: whyUs,
+    image: agent3,
     alt: "High quality home service delivery",
   },
 ];
@@ -74,7 +78,7 @@ const Hero = () => {
   const slide = slides[current];
 
   return (
-    <section className="hero">
+    <section className="hero" id="hero">
       {/* Left content */}
       <div className={`hero__content hero__content--fade${animating ? " hero__content--out" : ""}`}>
         <span className="hero__tagline">{slide.tagline}</span>

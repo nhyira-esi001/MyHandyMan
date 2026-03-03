@@ -10,12 +10,16 @@
 
 html {
   scroll-behavior: smooth;
+  /* Prevent text size adjustment on orientation change */
+  -webkit-text-size-adjust: 100%;
 }
 
 body {
   min-height: 100vh;
   background-color: #fff;
   color: #111827;
+  /* Prevent horizontal overflow on mobile */
+  overflow-x: hidden;
 }
 
 a {
@@ -25,6 +29,12 @@ a {
 
 button {
   font-family: 'Outfit', sans-serif;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
 }
 
 .app {
@@ -73,4 +83,3 @@ main {
 ::-webkit-scrollbar-thumb:hover {
   background: #ea8a1e;
 }
-

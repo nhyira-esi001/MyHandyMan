@@ -1,26 +1,27 @@
-/* Booking Form Section */
+/* ─── Booking Form — mobile first ──────────────────────── */
 .booking {
-  padding: 4rem 2rem;
+  padding: 2.5rem 1rem;
   background-color: #f8fafc;
 }
 
+/* Mobile: single column */
 .booking-container {
   display: grid;
-  grid-template-columns: 2fr 1fr;
-  gap: 3rem;
+  grid-template-columns: 1fr;
+  gap: 2rem;
   max-width: 1200px;
   margin: 0 auto;
 }
 
 .booking-form-section {
   background-color: white;
-  padding: 2.5rem;
+  padding: 1.5rem 1.25rem;
   border-radius: 12px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
 }
 
 .booking-title {
-  font-size: 1.8rem;
+  font-size: clamp(1.4rem, 3vw, 1.8rem);
   font-weight: 700;
   color: #111827;
   margin-bottom: 0.5rem;
@@ -29,23 +30,20 @@
 .booking-subtitle {
   font-size: 0.95rem;
   color: #4b5563;
-  margin-bottom: 2rem;
+  margin-bottom: 1.75rem;
 }
 
 .booking-form {
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
+  gap: 1.25rem;
 }
 
+/* Mobile: form rows are a single column */
 .form-row {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 1.5rem;
-}
-
-.form-row.full-width {
   grid-template-columns: 1fr;
+  gap: 1.25rem;
 }
 
 .form-group {
@@ -53,12 +51,9 @@
   flex-direction: column;
 }
 
-.form-group.full-width {
-  grid-column: 1 / -1;
-}
-
 .form-group input {
-  padding: 0.75rem 1rem;
+  padding: 0.85rem 1rem;
+  min-height: 44px; /* touch target */
   border: 1px solid #e5e7eb;
   border-radius: 6px;
   font-size: 0.95rem;
@@ -77,6 +72,7 @@
   color: white;
   border: none;
   padding: 0.9rem 1.8rem;
+  min-height: 44px;
   border-radius: 6px;
   font-size: 0.95rem;
   font-weight: 600;
@@ -89,23 +85,25 @@
   background-color: #ea8a1e;
 }
 
+/* Contact info panel */
 .booking-info {
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  gap: 1.75rem;
 }
 
 .info-item {
   display: flex;
-  gap: 1.5rem;
+  gap: 1.25rem;
+  align-items: flex-start;
 }
 
 .info-icon {
-  font-size: 1.8rem;
   display: flex;
   align-items: center;
   flex-shrink: 0;
   color: #fb923c;
+  margin-top: 0.1rem;
 }
 
 .info-content {
@@ -126,24 +124,40 @@
   margin: 0;
 }
 
-@media (max-width: 768px) {
+/* ─── Tablet (640 px+) ─────────────────────────────────── */
+@media (min-width: 640px) {
   .booking {
-    padding: 2.5rem 1.5rem;
-  }
-
-  .booking-container {
-    grid-template-columns: 1fr;
+    padding: 3rem 2rem;
   }
 
   .booking-form-section {
-    padding: 1.5rem;
+    padding: 2rem;
+  }
+}
+
+/* ─── Desktop (1024 px+): 2-col form rows, side-by-side layout ─ */
+@media (min-width: 1024px) {
+  .booking {
+    padding: 4rem 2.5rem;
   }
 
+  .booking-container {
+    grid-template-columns: 2fr 1fr;
+    gap: 3rem;
+  }
+
+  .booking-form-section {
+    padding: 2.5rem;
+  }
+
+  /* 2-column grid for paired fields (Name/Email, Phone/Date) */
   .form-row {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
   }
 
-  .form-row.full-width {
+  /* Address row stays full-width */
+  .form-row:has(.full-width) {
     grid-template-columns: 1fr;
   }
 }
